@@ -31,22 +31,12 @@ public class Main {
                 break;
             case "2":
                 System.out.println();
-                int number = 0;
-                System.out.println("Список покупок: ");
-                for (String product : list) {
-                    number++;
-                    System.out.println(number + ". " + product);
-                }
+                shoppList();
                 System.out.println();
                 break;
             case "3":
                 System.out.println();
-                int number2 = 0;
-                System.out.println("Список покупок: ");
-                for (String product : list) {
-                    number2++;
-                    System.out.println(number2 + ". " + product);
-                }
+                shoppList();
                 System.out.println("Какой товар хотите удалить? Введите номер или название");
                 String product = scanner.nextLine();
                 try {
@@ -81,6 +71,15 @@ public class Main {
             default:
                 System.out.println("Неверное значение.");
                 break;
+        }
+    }
+
+    public static void shoppList(){
+        int number = 0;
+        System.out.println("Список покупок: ");
+        for (String product : list) {
+            number++;
+            System.out.println(number + ". " + product);
         }
     }
 }
